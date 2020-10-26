@@ -13,7 +13,7 @@ import {
 
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
-import ENV from '@/constants';
+import env from '@/constants';
 
 export default {
   name: 'Home',
@@ -27,14 +27,14 @@ export default {
   setup(props, context) {
     onMounted(() => {
       console.log(context);
-      console.log(ENV);
+      console.log(env);
     });
 
     const templateText = ref('');
     const templateBoolean = ref(false);
     const templateObject = ref({});
 
-    watch(templateText, (value) => {
+    watch(templateText, (value /* oldValue */) => {
       if (value) {
         console.log('Analytics: Invalid text');
       }

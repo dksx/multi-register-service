@@ -1,7 +1,7 @@
-const ENV = {
+const env = {
   TEMPLATE_VALUE: process.env.VUE_APP_TEMPLATE_VALUE,
   TEMPLATE_ENVIRONMENT_VARIABLE: process.env.VUE_APP_TEMPLATE_ENVIRONMENT_VARIABLE,
   THEME: 'DARK',
 };
 
-export default ENV;
+export default env;
